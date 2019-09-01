@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Flex from '../components/Flex';
-import { Icon, Typography, IconButton, Button, Badge, Snackbar } from '@material-ui/core';
+import { Icon, Typography, IconButton, Button, Snackbar } from '@material-ui/core';
 export default function Header() {
 
     const [openSnackPhone, setOpenSnackPhone] = React.useState(false);
@@ -18,7 +18,7 @@ export default function Header() {
         setState(true);
     };
     return (
-        <Flex position="fixed" color="white" width="100%" minHeight="70px" backgroundColor="#607d8b" direction="row" justify="space-between">
+        <Flex style={{zIndex:1000}} position="fixed" color="white" width="100%" minHeight="70px" backgroundColor="#607d8b" direction="row" justify="space-between">
             <Flex margin="0 20px 0 20px" direction="row" gap="20px">
                 <IconButton onClick={() => scrollTo("presentation")} color="inherit"><Icon>keyboard_arrow_up</Icon></IconButton>
                 <Typography variant="h6">Simon Boisset</Typography>
@@ -29,8 +29,9 @@ export default function Header() {
                 <Button onClick={() => scrollTo("realisations")} color="inherit">Mes réalisations</Button>
                 <IconButton onClick={() => copy("0699484656", setOpenSnackPhone)} color="inherit"><Icon>phone</Icon></IconButton>
                 <IconButton onClick={() => copy("simon.boisset@gmail.com", setOpenSnackMail)} color="inherit"><Icon>mail</Icon></IconButton>
-                <IconButton color="inherit">
-                    <Badge variant="dot" color="secondary"><Icon>chat</Icon></Badge></IconButton>
+                {/* <IconButton color="inherit">
+                    <Badge variant="dot" color="secondary"><Icon>chat</Icon></Badge>
+                </IconButton> */}
             </Flex>
             <Snackbar
                 anchorOrigin={{
