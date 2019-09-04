@@ -1,7 +1,6 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
 import Flex from '../components/Flex';
-// import Image from '../components/Image';
 import Card from '../components/Card';
 import Projet from '../components/Projet';
 
@@ -11,6 +10,8 @@ export default function Realisations() {
     <Flex id="realisations" width="100%" padding="0 100px 0 100px" gap="30px">
       <Card padding="30px" gap="30px">
         <Typography variant="h2">Mes réalisations</Typography>
+        <Typography variant="body1" paragraph>Voici une liste de projets sur lesquels je travaille. 
+        Il s'agit pour la plupart de projets en cours développement.</Typography>
         <Flex direction="row" justify="space-around" gap="30px">
         <Projet title="Password Generator" 
           link="https://passwordgenerator.netlify.com/"
@@ -43,13 +44,13 @@ export default function Realisations() {
         <Projet title="React-static-starter"
           github="https://github.com/simonboisset/react-static-starter"
           chips={["React","Webpack"]}>
-          Une configuration webpack personnalisé pour démarer un projet react.
+          Une configuration webpack personnalisée pour démarer un projet react.
         </Projet>
         <Projet title="Local Compta" 
           link="https://localcompta.z28.web.core.windows.net/"
           github="https://github.com/simonboisset/local-compta"
           chips={["React","Redux","Material-UI","React-router"]}>
-          Un générateur de mot de passe aléatoir.
+          Un outil de compta simple, stocké dans localStorage.
         </Projet>
         </Flex>
       </Card>
