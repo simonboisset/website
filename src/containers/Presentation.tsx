@@ -46,10 +46,10 @@ export default function Presentation() {
                     <Typography variant="h6">Bienvenue sur mon site !</Typography>
                     <Typography paragraph variant="body1" align="justify">
                         Vous pourrez y trouver une présentation de mon profil. Mon parcours professionnel et ma formation.
-                        Vous pourrez également consulter le détail de mes réalisations en développement web plus bas.
+                        Vous découvrirez également le détail de mes réalisations en développement web ci-dessous.
                     </Typography>
                     <Typography paragraph variant="body1" align="justify">
-                        Pour me contacter, cliquez sur les icônes en haut à droite pour copier directement mon mail ou mon numéro de téléphone.
+                        Pour me contacter, copiez directement mon mail ou mon numéro de téléphone en cliquant sur les icônes en haut à droite.
                     </Typography>
                     <Typography paragraph variant="h6">Mes compétences :</Typography>
                     <Flex direction="row" width="100%" justify="center" gap="25px">

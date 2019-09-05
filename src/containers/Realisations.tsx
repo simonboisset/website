@@ -11,7 +11,7 @@ export default function Realisations() {
       <Card padding="30px" gap="30px" backgroundColor="#c1d5e0" elevation={0}>
         <Typography variant="h2">Mes réalisations</Typography>
         <Typography variant="body1" paragraph>Voici une liste de projets sur lesquels je travaille. 
-        Il s'agit pour la plupart de projets en cours développement.</Typography>
+        Il s'agit pour la plupart de projets en cours de développement.</Typography>
         <Flex direction="row" justify="space-around" gap="30px">
         <Projet title="Password Generator" 
           link="https://passwordgenerator.netlify.com/"
@@ -34,17 +34,17 @@ export default function Realisations() {
         <Projet title="React-graphql"
           github="https://github.com/simonboisset/react-graphql"
           chips={["React","API","graphql"]}>
-          Un client en react qui communique avec une API graphql.
+          Un client en react communiquant avec une API graphql.
         </Projet>
         <Projet title="React-express"
           github="https://github.com/simonboisset/react-express"
           chips={["React","API","express","jwt"]}>
-          Un client en react qui communique avec une API express.
+          Un client en react communiquant avec une API express.
         </Projet>
         <Projet title="React-static-starter"
           github="https://github.com/simonboisset/react-static-starter"
           chips={["React","Webpack"]}>
-          Une configuration webpack personnalisée pour démarer un projet react.
+          Une configuration webpack personnalisée pour démarrer un projet react.
         </Projet>
         <Projet title="Local Compta" 
           link="https://localcompta.z28.web.core.windows.net/"

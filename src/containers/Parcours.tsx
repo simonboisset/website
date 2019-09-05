@@ -17,7 +17,7 @@ export default function Parcours() {
           Stage en R&D sur le développement de sources fibrées picoseconde
         </Experience>
         <Experience title="Master Lasers et Applications, Université Lille 1" periode="2012-2014">
-          Optique non-linéaire, Laser, Fibre optiques
+          Optique non-linéaire, Laser, Fibres optiques
         </Experience>
         <Experience title="Stage Master, CNRS" periode="04/2013-08/2013">
           Optimisation d'une source IR et d'un OPO pour la microscopie Raman
