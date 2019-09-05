@@ -7,7 +7,7 @@ import Card from '../components/Card';
 export default function Parcours() {
   return (
     <Flex id="parcours" width="100%" padding="0 100px 0 100px" gap="30px">
-      <Card height="400px" padding="30px 0 30px 0">
+      <Card height="400px" padding="30px 0 30px 0" backgroundColor="#c1d5e0" elevation={0}>
         <Typography variant="h2">Mon Parcours</Typography>
         
         <Typography paragraph variant="body1" align="justify">

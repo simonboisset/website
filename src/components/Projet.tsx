@@ -15,7 +15,7 @@ interface Props {
 
 export default function Projet(props: Props) {
     return (
-        <Card gap="10px" elevation={0} backgroundColor="#d7ccc8" width="400px" height="180px" padding="10px" align="flex-start" justify="space-between">
+        <Card gap="10px" elevation={3} backgroundColor="white" width="400px" height="180px" padding="10px" align="flex-start" justify="space-between">
             <Flex direction="row" width="100%" gap="20px">
                 <Typography variant="h6">{props.title}</Typography>
                 {props.link ? <a href={props.link} rel="noopener noreferrer" target="_blank"><Icon style={{ color:"black", fontSize: 37 }}>public</Icon></a>:null}

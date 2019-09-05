@@ -8,7 +8,7 @@ import Projet from '../components/Projet';
 export default function Realisations() {
   return (
     <Flex id="realisations" width="100%" padding="0 100px 0 100px" gap="30px">
-      <Card padding="30px" gap="30px">
+      <Card padding="30px" gap="30px" backgroundColor="#c1d5e0" elevation={0}>
         <Typography variant="h2">Mes réalisations</Typography>
         <Typography variant="body1" paragraph>Voici une liste de projets sur lesquels je travaille. 
         Il s'agit pour la plupart de projets en cours développement.</Typography>
