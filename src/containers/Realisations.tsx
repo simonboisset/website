@@ -52,6 +52,12 @@ export default function Realisations() {
           chips={["React","Redux","Material-UI","React-router"]}>
           Un outil de compta simple, stocké dans localStorage.
         </Projet>
+        <Projet title="Website" 
+          link="https://simonboisset.netlify.com/"
+          github="https://github.com/simonboisset/website"
+          chips={["React","Typescript","Material-UI"]}>
+          Mon site personnel ici même.
+        </Projet>
         </Flex>
       </Card>
     </Flex>
