@@ -16,7 +16,7 @@ export default function Experience(props: Props) {
                 expandIcon={<Icon>keyboard_arrow_down</Icon>}
             >
                 <Flex direction="row" gap="50px">
-                    <Typography variant="overline">{props.periode}</Typography>
+                    <Typography style={{width:"150px"}} variant="overline">{props.periode}</Typography>
                     <Typography variant="overline">{props.title}</Typography>
                 </Flex>
             </ExpansionPanelSummary>
