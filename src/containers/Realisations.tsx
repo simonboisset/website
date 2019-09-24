@@ -25,10 +25,10 @@ export default function Realisations() {
           chips={["React","Storybook","npm"]}>
           Une librairie de composants react personnalisés.
         </Projet>
-        <Projet title="Photoncalc" 
-          link="https://photoncalc.z28.web.core.windows.net/"
-          github="https://github.com/simonboisset/photoncalc"
-          chips={["React","recharts","Material-UI"]}>
+        <Projet title="Photon-tools" 
+          link="https://photon-tools.netlify.com/"
+          github="https://github.com/simonboisset/photon-tools"
+          chips={["Angular","google-charts"]}>
           Outil de traitement de mesures physiques, présentation en graphiques et simulation optique.
         </Projet>
         <Projet title="React-graphql"
