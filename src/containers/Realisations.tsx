@@ -31,6 +31,12 @@ export default function Realisations() {
           chips={["Angular","google-charts"]}>
           Outil de traitement de mesures physiques, présentation en graphiques et simulation optique.
         </Projet>
+        <Projet title="Compta" 
+          link="https://compta.netlify.com/"
+          github="https://github.com/simonboisset/compta"
+          chips={["Vue","Vuetify","Google Charts","Material Design"]}>
+          Un outil de compta simple, stocké dans localStorage.
+        </Projet>
         <Projet title="React-graphql"
           github="https://github.com/simonboisset/react-graphql"
           chips={["React","API","graphql"]}>
@@ -45,12 +51,6 @@ export default function Realisations() {
           github="https://github.com/simonboisset/react-static-starter"
           chips={["React","Webpack"]}>
           Une configuration webpack personnalisée pour démarrer un projet react.
-        </Projet>
-        <Projet title="Local Compta" 
-          link="https://localcompta.z28.web.core.windows.net/"
-          github="https://github.com/simonboisset/local-compta"
-          chips={["React","Redux","Material-UI","React-router"]}>
-          Un outil de compta simple, stocké dans localStorage.
         </Projet>
         <Projet title="Website" 
           link="https://simonboisset.netlify.com/"

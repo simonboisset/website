@@ -22,6 +22,7 @@ import typescript from '../assets/typescript.png';
 import webpack from '../assets/webpack.svg';
 import bootstrap from '../assets/bootstrap.svg';
 import jest from '../assets/jest.svg';
+import vue from '../assets/vue.svg';
 
 
 export default function Presentation() {
@@ -60,6 +61,7 @@ export default function Presentation() {
                         <Competence label="Typescript" icon={typescript} level={60} />
                         <Competence label="JQuery" level={60} />
                         <Competence label="Node" icon={nodesvg} level={70} />
+                        <Competence label="Vue" icon={vue} level={70} />
                         <Competence label="Angular" icon={angular} level={50} />
                         <Competence label="React" icon={react} level={80} />
                         <Competence label="Redux" icon={redux} level={70} />
