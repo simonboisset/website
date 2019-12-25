@@ -19,6 +19,7 @@ import nodesvg from '../assets/node.svg';
 import redux from '../assets/redux.svg';
 import graphqlsvg from '../assets/graphql.svg';
 import typescript from '../assets/typescript.png';
+import firebasesvg from '../assets/firebase.svg';
 import webpack from '../assets/webpack.svg';
 import bootstrap from '../assets/bootstrap.svg';
 import jest from '../assets/jest.svg';
@@ -69,6 +70,7 @@ export default function Presentation() {
                         <Competence label="Bootstrap" icon={bootstrap} level={70} />
                         <Competence label="GraphQL" icon={graphqlsvg} level={50} />
                         <Competence label="Webpack" icon={webpack} level={50} />
+                        <Competence label="Firebase" icon={firebasesvg} level={60} />
                         <Competence label="Jest" icon={jest} level={50} />
                     </Flex>
                 </Card>

@@ -58,6 +58,11 @@ export default function Realisations() {
           chips={["React","Typescript","Material-UI"]}>
           Mon site personnel ici même.
         </Projet>
+        <Projet title="Motiv" 
+          link="https://motiv-app.web.app/"
+          chips={["React","Styled Components","Firebase"]}>
+          App de messagerie instantanée donnant la géolocalisation de ses contacts
+        </Projet>
         </Flex>
       </Card>
     </Flex>

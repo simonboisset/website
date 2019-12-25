@@ -19,7 +19,7 @@ export default function Projet(props: Props) {
             <Flex direction="row" width="100%" gap="20px">
                 <Typography variant="h6">{props.title}</Typography>
                 {props.link ? <a href={props.link} rel="noopener noreferrer" target="_blank"><Icon style={{ color:"black", fontSize: 37 }}>public</Icon></a>:null}
-                <a href={props.github} rel="noopener noreferrer" target="_blank"><Image width="35px" height="35px" src={githubsvg} /></a>
+                {props.github ?<a href={props.github} rel="noopener noreferrer" target="_blank"><Image width="35px" height="35px" src={githubsvg} /></a>:null}
             </Flex>
             <Typography variant="body1" paragraph>{props.children}</Typography>
             <Flex direction="row" gap="10px">
