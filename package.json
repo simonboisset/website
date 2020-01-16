@@ -17,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "firebase deploy --token 1//03POh2ZccdM5wCgYIARAAGAMSNwF-L9IrhSLXqiyM3B8lQoRjmG5ChrBWEZkMh1qRHEZJ5g8xLXPWxzYM93RVOY5WoeOG4eKg124"
   },
   "eslintConfig": {
     "extends": "react-app"
