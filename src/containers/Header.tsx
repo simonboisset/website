@@ -1,8 +1,8 @@
 import React from 'react';
-
+import { withStore } from 'Store';
 import Flex from '../components/Flex';
 import { Icon, Typography, IconButton, Button, Snackbar } from '@material-ui/core';
-export default function Header() {
+export default withStore(function Header({setOpenDrawer}:any) {
 
     const [openSnackPhone, setOpenSnackPhone] = React.useState(false);
     const [openSnackMail, setOpenSnackMail] = React.useState(false);
@@ -18,7 +18,7 @@ export default function Header() {
         setState(true);
     };
     return (
-        <Flex style={{zIndex:1000}} position="fixed" color="white" width="100%" minHeight="70px" backgroundColor="#607d8b" direction="row" justify="space-between">
+        <Flex style={{ zIndex: 1000 }} position="fixed" color="white" width="100%" minHeight="70px" backgroundColor="#607d8b" direction="row" justify="space-between">
             <Flex margin="0 20px 0 20px" direction="row" gap="20px">
                 <IconButton onClick={() => scrollTo("presentation")} color="inherit"><Icon>keyboard_arrow_up</Icon></IconButton>
                 <Typography variant="h6">Simon Boisset</Typography>
@@ -29,6 +29,7 @@ export default function Header() {
                 <Button onClick={() => scrollTo("realisations")} color="inherit">Mes réalisations</Button>
                 <IconButton onClick={() => copy("0699484656", setOpenSnackPhone)} color="inherit"><Icon>phone</Icon></IconButton>
                 <IconButton onClick={() => copy("simon.boisset@gmail.com", setOpenSnackMail)} color="inherit"><Icon>mail</Icon></IconButton>
+                <IconButton onClick={() => setOpenDrawer(true)} color="inherit"><Icon>question_answer</Icon></IconButton>
                 {/* <IconButton color="inherit">
                     <Badge variant="dot" color="secondary"><Icon>chat</Icon></Badge>
                 </IconButton> */}
@@ -48,7 +49,7 @@ export default function Header() {
                 action={[
                     <Button key="undo" color="secondary" size="small" onClick={() => setOpenSnackPhone(false)}>
                         Close
-                        </Button>,
+                    </Button>,
                 ]}
             />
             <Snackbar
@@ -66,9 +67,9 @@ export default function Header() {
                 action={[
                     <Button key="undo" color="secondary" size="small" onClick={() => setOpenSnackMail(false)}>
                         Close
-                        </Button>,
+                    </Button>,
                 ]}
             />
         </Flex>
     );
-}
+})

@@ -3,6 +3,7 @@ import React from 'react';
 import Flex from './components/Flex';
 import Header from './containers/Header';
 import Body from './containers/Body';
+import Messenger from './containers/Messenger';
 import Footer from './containers/Footer';
 
 export default function App(){
@@ -12,6 +13,7 @@ export default function App(){
         <Header/>
         <Body/>
       </Flex>
+      <Messenger/>
       <Footer/>
     </Flex>
   );
