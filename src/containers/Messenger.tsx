@@ -18,7 +18,7 @@ export default withStore(function ({ openDrawer, setOpenDrawer,activeUser }: any
             onClose={() => setOpenDrawer(false)}
             anchor="right"
             open={openDrawer}>
-            <Grid container justify="center" className={classes.drawer} spacing={3}>
+            <Grid container direction="column" justify="center" className={classes.drawer} spacing={3}>
                 {activeUser ?activeUser.admin?<ChatList/>:activeUser.verified?
                     <ChatBox />:"Vérifiez votre email"
                     : <Login />}

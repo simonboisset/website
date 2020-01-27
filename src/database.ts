@@ -64,5 +64,8 @@ export default {
     firebase.firestore().collection("users").doc(id).update({
       messages: firebase.firestore.FieldValue.arrayUnion(message)
     })
+  },
+  watchAllUsers(callback:(users: any)=>void){
+    firebase.firestore().collection("users").onSnapshot((users)=>callback(users))
   }
 };
