@@ -1,0 +1,13 @@
+import React from 'react';
+import { withStore } from 'Store';
+import database from 'database';
+import { Button, Grid } from '@material-ui/core'
+export default withStore(function (props: any) {
+  return (
+    <React.Fragment>
+      <Grid item >
+        <Button onClick={() => database.logout()}>Logout</Button>
+      </Grid>
+    </React.Fragment>
+  );
+})
