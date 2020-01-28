@@ -53,7 +53,7 @@ export default function Realisations() {
           Une configuration webpack personnalisée pour démarrer un projet react.
         </Projet>
         <Projet title="Website" 
-          link="https://simonboisset.netlify.com/"
+          link="https://simon-boisset.web.app/"
           github="https://github.com/simonboisset/website"
           chips={["React","Typescript","Material-UI"]}>
           Mon site personnel ici même.
