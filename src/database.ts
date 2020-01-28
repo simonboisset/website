@@ -29,7 +29,7 @@ export default {
           if (res.uid === "WecAfOW3FOYbGSKLbDVXVtX1gJA2") {
             callback({ id: res.uid, name: "", messages: [], admin: true, verified: true })
           } else {
-            this.watchUserById(res.uid, (user: IUser) => callback({ ...user, admin: false, verified: true }));
+            this.watchUserById(res.uid, (user: IUser) => callback({ ...user, admin: false, verified: true, id: res.uid }));
           }
         } else {
           callback({ id: "", name: "", messages: [], admin: false, verified: false })
@@ -60,12 +60,13 @@ export default {
     firebase.firestore().collection("users").doc(id)
       .onSnapshot((user) => onChange({ id, name: "", messages: [], ...user.data(), admin: false, verified: false }))
   },
-  sendMessage(id: string, message: IMessage) {
+  sendMessage(id: string, message: string, admin: boolean) {
+
     firebase.firestore().collection("users").doc(id).update({
-      messages: firebase.firestore.FieldValue.arrayUnion(message)
+      messages: firebase.firestore.FieldValue.arrayUnion({ text: message, date: firebase.firestore.Timestamp.now(), writer: !admin })
     })
   },
-  watchAllUsers(callback:(users: any)=>void){
-    firebase.firestore().collection("users").onSnapshot((users)=>callback(users))
+  watchAllUsers(callback: (users: any) => void) {
+    firebase.firestore().collection("users").onSnapshot((users) => callback(users))
   }
 };

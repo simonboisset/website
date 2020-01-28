@@ -1,6 +1,6 @@
 import React from 'react';
 import database from 'database';
-import { Button, TextField, ButtonGroup, Collapse, Grid } from '@material-ui/core'
+import { Button, TextField, ButtonGroup, Collapse, Grid,Typography } from '@material-ui/core'
 
 import { withStore } from "Store";
 
@@ -25,12 +25,9 @@ export default withStore(function () {
     return (
         <React.Fragment>
             <Grid item >
-                <ButtonGroup>
-                    <Button color="primary" variant={open ? "outlined" : "contained"} onClick={() => setOpen(false)}>Login</Button>
-                    <Button color="primary" variant={open ? "contained" : "outlined"} onClick={() => setOpen(true)}>Signin</Button>
-                </ButtonGroup>
+                <Typography>Testez la messagerie instannée (version bêta)</Typography>
             </Grid>
-            <Grid item xs={12}>
+            <Grid item >
                 <Collapse in={open}>
                     <form onSubmit={signin}>
                         <Grid container
@@ -56,6 +53,12 @@ export default withStore(function () {
                         </Grid>
                     </form>
                 </Collapse>
+            </Grid>
+            <Grid item >
+                <ButtonGroup>
+                    <Button color="primary" variant={open ? "outlined" : "contained"} onClick={() => setOpen(false)}>Login</Button>
+                    <Button color="primary" variant={open ? "contained" : "outlined"} onClick={() => setOpen(true)}>Signin</Button>
+                </ButtonGroup>
             </Grid>
         </React.Fragment>
     );
