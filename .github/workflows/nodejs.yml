@@ -19,8 +19,8 @@ jobs:
     - name: Archive Production Artifact
       uses: actions/upload-artifact@master
       with:
-        name: build
-        path: build
+        name: dist
+        path: dist
   deploy:
     needs: build
     runs-on: ubuntu-latest
