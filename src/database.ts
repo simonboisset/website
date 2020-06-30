@@ -7,17 +7,19 @@ import "firebase/storage";
 interface IMessage { send: boolean, text: string, date: firebase.firestore.Timestamp }
 interface IUser { name: string, id: string, messages: IMessage[], admin: boolean, verified: boolean }
 
+
+
 export default {
   init() {
     const config = {
-      apiKey: "AIzaSyDtXwANhoKvyxaMA7kLEW9Xf-v5LI-BWiE",
-      authDomain: "simon-boisset.firebaseapp.com",
-      databaseURL: "https://simon-boisset.firebaseio.com",
-      projectId: "simon-boisset",
-      storageBucket: "simon-boisset.appspot.com",
-      messagingSenderId: "371411269068",
-      appId: "1:371411269068:web:98f7cd35ba8d6714231969",
-      measurementId: "G-7B80QQVQ5S"
+      apiKey: process.env.REACT_APP_API_KEY,
+      authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+      databaseURL: process.env.REACT_APP_DATABASE_URL,
+      projectId: process.env.REACT_APP_POJECT_ID,
+      storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+      messagingSenderId: process.env.REACT_APP_MASSAGING_ID,
+      appId: process.env.REACT_APP_APP_ID,
+      measurementId: process.env.REACT_APP_MEASUREMENT_ID
     };
     firebase.initializeApp(config);
 
@@ -26,7 +28,7 @@ export default {
     firebase.auth().onAuthStateChanged(res => {
       if (res) {
         if (res.emailVerified) {
-          if (res.uid === "WecAfOW3FOYbGSKLbDVXVtX1gJA2") {
+          if (res.uid === process.env.REACT_APP_MY_ID) {
             callback({ id: res.uid, name: "", messages: [], admin: true, verified: true })
           } else {
             this.watchUserById(res.uid, (user: IUser) => callback({ ...user, admin: false, verified: true, id: res.uid }));

@@ -1,7 +1,7 @@
 import React from 'react';
-import { withStore } from 'Store';
-import database from 'database';
-import Message from "components/Message";
+import { withStore } from '../Store';
+import database from '../database';
+import Message from "../components/Message";
 import {  Grid, TextField,Icon,IconButton } from '@material-ui/core'
 export default withStore(function (props: any) {
   const [text, setText] = React.useState("");

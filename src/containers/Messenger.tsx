@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStore } from 'Store';
+import { withStore } from '../Store';
 import ChatList from './ChatList';
 import ChatBox from './ChatBox';
 import Login from './Login';

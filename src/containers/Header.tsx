@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStore } from 'Store';
+import { withStore } from '../Store';
 import Flex from '../components/Flex';
 import { Icon, Typography, IconButton, Button, Snackbar } from '@material-ui/core';
 export default withStore(function Header({setOpenDrawer}:any) {

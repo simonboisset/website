@@ -1,6 +1,6 @@
 import React from "react";
 
-import database from 'database';
+import database from './database';
 const Store = React.createContext({});
 
 export default function (props: { children: React.ReactNode }) {
@@ -15,7 +15,7 @@ export default function (props: { children: React.ReactNode }) {
                 if (user.admin) {
                     database.watchAllUsers((res) => {
                         res.docChanges().forEach((contact: any) => {
-                            if (contact.doc.id !== "WecAfOW3FOYbGSKLbDVXVtX1gJA2") {
+                            if (contact.doc.id !== process.env.REACT_APP_MY_ID) {
                                 if (contact.type === "added") {
                                     setUsers((prevState: any) => [...prevState, { ...contact.doc.data(), id: contact.doc.id }])
                                 } else if (contact.type === "modified") {
