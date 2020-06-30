@@ -23,7 +23,7 @@ jobs:
       run: yarn build
     - name: Build
       run: yarn deploy
-      with:
+      env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       env:
         CI: true
