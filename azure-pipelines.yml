@@ -13,5 +13,5 @@ steps:
 - script: |
     yarn
     yarn build
-    firebase deploy --token $FIREBASE_TOKEN
+    yarn deploy
   displayName: 'npm install and build'
