@@ -32,11 +32,9 @@ export default function Presentation() {
             <Flex width="350px" >
                 <Card width="100%" >
                     <Image height="350px" src={me} />
-                    <Item icon={<Icon>work</Icon>} label="Ingénieur Laser"/>
-                    <Item icon={<Icon>build</Icon>} label="Developeur js"/>
+                    <Item icon={<Icon>work</Icon>} label="Developeur js"/>
                     <Item icon={<Icon>room</Icon>} label="Nantes" href="https://www.google.fr/maps/place/Nantes/" />
                     <Item icon={<Icon>mail</Icon>} label="simon.boisset@gmail.com"/>
-                    <Item icon={<Icon>phone</Icon>} label="06 99 48 46 56"/>
                     <Item icon={<Image width="25px" height="25px" src={linkedin} />} 
                     href="https://www.linkedin.com/in/simon-boisset-733445138/" label="Linkedin"/>
                     <Item icon={<Image width="25px" height="25px" src={github} />} 
