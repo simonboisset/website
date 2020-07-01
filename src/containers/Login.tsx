@@ -1,8 +1,8 @@
 import React from 'react';
-import database from '../database';
+import database from '../tools/database';
 import { Button, TextField, ButtonGroup, Collapse, Grid,Typography } from '@material-ui/core'
 
-import { withStore } from "../Store";
+import { withStore } from "../contexts/Store";
 
 export default withStore(function () {
     const [email, setEmail] = React.useState("");

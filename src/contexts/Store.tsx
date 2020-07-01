@@ -1,6 +1,6 @@
 import React from "react";
 
-import database from './database';
+import database from '../tools/database';
 const Store = React.createContext({});
 
 export default function (props: { children: React.ReactNode }) {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { withStore } from '../Store';
-import database from '../database';
+import { withStore } from '../contexts/Store';
+import database from '../tools/database';
 import { IconButton,Icon, Grid, List, ListItem, Avatar, ListItemIcon, ListItemText } from '@material-ui/core'
 import ChatBox from "./ChatBox";
 export default withStore(function (props: any) {

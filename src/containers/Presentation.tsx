@@ -34,7 +34,7 @@ export default function Presentation() {
                     <Image height="350px" src={me} />
                     <Item icon={<Icon>work</Icon>} label="Developeur js"/>
                     <Item icon={<Icon>room</Icon>} label="Nantes" href="https://www.google.fr/maps/place/Nantes/" />
-                    <Item icon={<Icon>mail</Icon>} label="simon.boisset@gmail.com"/>
+                    <Item icon={<Icon>mail</Icon>} label="simon.boisset@gmail.com" href="mailto:simon.boisset@gmail.com" />
                     <Item icon={<Image width="25px" height="25px" src={linkedin} />} 
                     href="https://www.linkedin.com/in/simon-boisset-733445138/" label="Linkedin"/>
                     <Item icon={<Image width="25px" height="25px" src={github} />} 

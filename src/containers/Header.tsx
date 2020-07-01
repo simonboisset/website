@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStore } from '../Store';
+import { withStore } from '../contexts/Store';
 import Flex from '../components/Flex';
 import { Icon, Typography, IconButton, Button, Snackbar } from '@material-ui/core';
 export default withStore(function Header({setOpenDrawer}:any) {
@@ -27,8 +27,7 @@ export default withStore(function Header({setOpenDrawer}:any) {
                 <Button onClick={() => scrollTo("presentation")} color="inherit">Présentation</Button>
                 <Button onClick={() => scrollTo("parcours")} color="inherit">Mon parcours</Button>
                 <Button onClick={() => scrollTo("realisations")} color="inherit">Mes réalisations</Button>
-                <IconButton onClick={() => copy("0699484656", setOpenSnackPhone)} color="inherit"><Icon>phone</Icon></IconButton>
-                <IconButton onClick={() => copy("simon.boisset@gmail.com", setOpenSnackMail)} color="inherit"><Icon>mail</Icon></IconButton>
+                <IconButton  href="mailto:simon.boisset@gmail.com" color="inherit"><Icon>mail</Icon></IconButton>
                 <IconButton onClick={() => setOpenDrawer(true)} color="inherit"><Icon>question_answer</Icon></IconButton>
                 {/* <IconButton color="inherit">
                     <Badge variant="dot" color="secondary"><Icon>chat</Icon></Badge>
