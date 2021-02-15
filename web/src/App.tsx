@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import Flex from "./components/Flex";
+import Header from "./containers/Header";
+import Body from "./containers/Body";
+import Footer from "./containers/Footer";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flex minHeight="100vh" backgroundColor="#e0e0e0" gap="50px" justify="space-between" padding="100px 0 0 0">
+      <Flex width="100%" justify="center" gap="50px">
+        <Header />
+        <Body />
+      </Flex>
+      <Footer />
+    </Flex>
   );
 }
-
-export default App;

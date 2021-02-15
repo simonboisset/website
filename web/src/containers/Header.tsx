@@ -1,8 +1,7 @@
 import React from "react";
-import { withStore } from "../contexts/Store";
 import Flex from "../components/Flex";
 import { Icon, Typography, IconButton, Button, Snackbar } from "@material-ui/core";
-export default withStore(function Header({ setOpenDrawer }: any) {
+export default function Header({ setOpenDrawer }: any) {
   const [openSnackPhone, setOpenSnackPhone] = React.useState(false);
   const [openSnackMail, setOpenSnackMail] = React.useState(false);
 
@@ -45,9 +44,6 @@ export default withStore(function Header({ setOpenDrawer }: any) {
         <IconButton onClick={() => setOpenDrawer(true)} color="inherit">
           <Icon>question_answer</Icon>
         </IconButton>
-        {/* <IconButton color="inherit">
-                    <Badge variant="dot" color="secondary"><Icon>chat</Icon></Badge>
-                </IconButton> */}
       </Flex>
       <Snackbar
         anchorOrigin={{
@@ -87,4 +83,4 @@ export default withStore(function Header({ setOpenDrawer }: any) {
       />
     </Flex>
   );
-});
+}
