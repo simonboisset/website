@@ -3,6 +3,8 @@ import express from 'express';
 import { MongoClient } from 'mongodb';
 import { config } from 'dotenv';
 config();
+console.log(process.env.MONGO_URI);
+console.log(process.env.DATABASE);
 
 const client = new MongoClient(process.env.MONGO_URI, {
   useUnifiedTopology: true,
