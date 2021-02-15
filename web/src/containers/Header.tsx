@@ -1,7 +1,7 @@
 import React from "react";
 import Flex from "../components/Flex";
 import { Icon, Typography, IconButton, Button, Snackbar } from "@material-ui/core";
-export default function Header({ setOpenDrawer }: any) {
+export default function Header() {
   const [openSnackPhone, setOpenSnackPhone] = React.useState(false);
   const [openSnackMail, setOpenSnackMail] = React.useState(false);
 
@@ -40,9 +40,6 @@ export default function Header({ setOpenDrawer }: any) {
         </Button>
         <IconButton href="mailto:simon.boisset@gmail.com" color="inherit">
           <Icon>mail</Icon>
-        </IconButton>
-        <IconButton onClick={() => setOpenDrawer(true)} color="inherit">
-          <Icon>question_answer</Icon>
         </IconButton>
       </Flex>
       <Snackbar
