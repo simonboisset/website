@@ -1,11 +1,9 @@
-import React from "react";
-
 import { Typography, Accordion, AccordionDetails, AccordionSummary, Icon } from "@material-ui/core";
 import Flex from "./Flex";
 interface Props {
   title: string | undefined;
   periode: string | undefined;
-  children: React.ReactNodeArray | React.ReactNode | undefined;
+  children?: string | JSX.Element | JSX.Element[];
 }
 
 export default function Experience(props: Props) {

@@ -1,9 +1,9 @@
-import React from "react";
+import { useState } from "react";
 import Flex from "../components/Flex";
 import { Icon, Typography, IconButton, Button, Snackbar } from "@material-ui/core";
 export default function Header() {
-  const [openSnackPhone, setOpenSnackPhone] = React.useState(false);
-  const [openSnackMail, setOpenSnackMail] = React.useState(false);
+  const [openSnackPhone, setOpenSnackPhone] = useState(false);
+  const [openSnackMail, setOpenSnackMail] = useState(false);
 
   function scrollTo(id: string) {
     let element = document.getElementById(id);
@@ -38,9 +38,6 @@ export default function Header() {
         <Button onClick={() => scrollTo("realisations")} color="inherit">
           Mes réalisations
         </Button>
-        <IconButton href="mailto:simon.boisset@gmail.com" color="inherit">
-          <Icon>mail</Icon>
-        </IconButton>
       </Flex>
       <Snackbar
         anchorOrigin={{
