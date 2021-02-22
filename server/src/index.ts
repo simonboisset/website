@@ -1,37 +1,36 @@
-import cors from 'cors';
-import express from 'express';
-import { MongoClient } from 'mongodb';
-import { config } from 'dotenv';
-config();
+import { PrismaClient } from '@prisma/client';
+import { fastify } from 'fastify';
+const prisma = new PrismaClient();
 
-const client = new MongoClient(process.env.MONGO_URI, {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
+const app = fastify({
+  logger: true,
+});
+app.get('/get', async () => {
+  const allUsers = await prisma.user.findMany();
+  return { allUsers };
+});
+app.get('/create', async () => {
+  await prisma.user.create({
+    data: {
+      name: 'Alice',
+      email: 'alice@prisma.io',
+      posts: {
+        create: { title: 'Hello World' },
+      },
+      profile: {
+        create: { bio: 'I like turtles' },
+      },
+    },
+  });
+  const allUsers = await prisma.user.findMany();
+
+  return { allUsers };
 });
 
-const port = 8080;
-async function run() {
-  try {
-    await client.connect();
-    await client.db('admin').command({ ping: 1 });
-    console.log('Connected successfully to server');
-  } finally {
+app.listen(3000, function (err, address) {
+  if (err) {
+    app.log.error({ err });
+    process.exit(1);
   }
-}
-run().catch(console.dir);
-const app = express();
-app.use(cors());
-app.use(express.json());
-app.get('/', async (req, res) => {
-  try {
-    const col = client.db(process.env.DATABASE).collection('test');
-    const query = await col.findOne({});
-    res.json({ message: 'Hello', data: query });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+  app.log.info(`server listening on ${address}`);
 });

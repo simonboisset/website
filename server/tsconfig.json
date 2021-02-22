@@ -5,7 +5,7 @@
     "rootDir": "./src",
     "module": "commonjs",
     "target": "ESNext",
-    "lib": ["ESNext"],
+    "lib": ["ESNext","DOM"],
     "declaration": true,
     "sourceMap": true,
     "moduleResolution": "node",
