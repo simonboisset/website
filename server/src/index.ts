@@ -1,7 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 import { fastify } from 'fastify';
+import { config } from 'dotenv';
 const prisma = new PrismaClient();
-
+config();
 const app = fastify({
   logger: true,
 });
@@ -27,7 +28,7 @@ app.get('/create', async () => {
   return { allUsers };
 });
 
-app.listen(3000, function (err, address) {
+app.listen(process.env.PORT, function (err, address) {
   if (err) {
     app.log.error({ err });
     process.exit(1);
