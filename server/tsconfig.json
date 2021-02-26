@@ -3,16 +3,13 @@
     "baseUrl": ".",
     "outDir": "./dist",
     "rootDir": "./src",
-    "module": "commonjs",
     "target": "ESNext",
-    "lib": ["ESNext","DOM"],
+    "lib": ["ESNext"],
     "declaration": true,
     "sourceMap": true,
     "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "skipLibCheck": true,
-    "esModuleInterop":true
+    "esModuleInterop":true,"strict": true,
   }
 }
