@@ -1,7 +1,8 @@
 FROM node:14
 WORKDIR /app
-COPY . ./
+COPY . .
 RUN yarn
+RUN yarn prisma generate
 RUN yarn build
 RUN yarn prisma migrate dev --name init --preview-feature
 EXPOSE 8080
