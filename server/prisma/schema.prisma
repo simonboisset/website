@@ -1,6 +1,6 @@
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgresql://postgres:BEiFf5zGL1m61I5E@localhost/simonboisset-db?host=/cloudsql/simonboisset:europe-west1:simonboisset-postgre"
 }
 
 generator client {
