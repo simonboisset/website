@@ -29,7 +29,7 @@ app.get('/create', async () => {
   return { allUsers };
 });
 
-app.listen(3000, function (err, address) {
+app.listen(8080, function (err, address) {
   if (err) {
     app.log.error({ err });
     process.exit(1);
