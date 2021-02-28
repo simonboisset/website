@@ -1,8 +1,6 @@
 import { PrismaClient } from '@prisma/client';
-import { config } from 'dotenv';
 import { fastify } from 'fastify';
 const prisma = new PrismaClient();
-config();
 const app = fastify({
   logger: true,
 });
